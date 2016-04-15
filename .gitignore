@@ -1,0 +1,6 @@
+.DS_Store
+*.log
+coverage/
+node_modules/
+hast-util-whitespace.js
+hast-util-whitespace.min.js
