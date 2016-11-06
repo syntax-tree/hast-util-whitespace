@@ -20,32 +20,22 @@ Dependencies:
 
 ```javascript
 var whitespace = require('hast-util-whitespace');
-```
 
-Checks:
+whitespace({
+  type: 'element',
+  tagName: 'div',
+  children: []
+}); //=> false
 
-```javascript
-var a = whitespace({
-    'type': 'element',
-    'tagName': 'div',
-    'children': []
-});
-var b = whitespace({
-    'type': 'text',
-    'value': '\t  \n'
-});
-var c = whitespace({
-    'type': 'text',
-    'value': '  text\f'
-});
-```
+whitespace({
+  type: 'text',
+  value: '\t  \n'
+}); //=> true
 
-Yields:
-
-```txt
-a: false
-b: true
-c: false
+whitespace({
+  type: 'text',
+  value: '  text\f'
+}); //=> false
 ```
 
 ## API
