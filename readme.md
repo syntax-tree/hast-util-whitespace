@@ -11,9 +11,6 @@ whitespace**][spec].
 npm install hast-util-whitespace
 ```
 
-**hast-util-whitespace** is also available as an AMD, CommonJS, and
-globals module, [uncompressed and compressed][releases].
-
 ## Usage
 
 Dependencies:
@@ -42,12 +39,12 @@ whitespace({
 
 ### `whitespace(node|value)`
 
-**Parameters**:
+###### Parameters
 
 *   `node` ([`Node`][node], optional) — Node whose `value` to check.
 *   `value` (`string`, optional) — Value to check.
 
-**Returns**:
+###### Returns
 
 `boolean` — Whether the `value` (of [`node`][text]) is inter-element
 white-space: consisting of zero or more of space, tab (`\t`),
@@ -68,8 +65,6 @@ line feed (`\n`), carriage return (`\r`), or form feed (`\f`).
 [coverage-page]: https://codecov.io/github/wooorm/hast-util-whitespace?branch=master
 
 [npm]: https://docs.npmjs.com/cli/install
-
-[releases]: https://github.com/wooorm/hast-util-whitespace/releases
 
 [license]: LICENSE
 
