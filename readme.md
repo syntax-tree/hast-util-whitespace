@@ -56,13 +56,13 @@ line feed (`\n`), carriage return (`\r`), or form feed (`\f`).
 
 <!-- Definition -->
 
-[build-badge]: https://img.shields.io/travis/wooorm/hast-util-whitespace.svg
+[build-badge]: https://img.shields.io/travis/syntax-tree/hast-util-whitespace.svg
 
-[build-page]: https://travis-ci.org/wooorm/hast-util-whitespace
+[build-page]: https://travis-ci.org/syntax-tree/hast-util-whitespace
 
-[coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/hast-util-whitespace.svg
+[coverage-badge]: https://img.shields.io/codecov/c/github/syntax-tree/hast-util-whitespace.svg
 
-[coverage-page]: https://codecov.io/github/wooorm/hast-util-whitespace?branch=master
+[coverage-page]: https://codecov.io/github/syntax-tree/hast-util-whitespace?branch=master
 
 [npm]: https://docs.npmjs.com/cli/install
 
@@ -70,10 +70,10 @@ line feed (`\n`), carriage return (`\r`), or form feed (`\f`).
 
 [author]: http://wooorm.com
 
-[hast]: https://github.com/wooorm/hast
+[hast]: https://github.com/syntax-tree/hast
 
 [spec]: https://html.spec.whatwg.org/#inter-element-whitespace
 
-[node]: https://github.com/wooorm/hast#node
+[node]: https://github.com/syntax-tree/unist#node
 
-[text]: https://github.com/wooorm/hast#text
+[text]: https://github.com/syntax-tree/unist#text

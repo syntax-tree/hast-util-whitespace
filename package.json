@@ -18,9 +18,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/wooorm/hast-util-whitespace.git"
+    "url": "https://github.com/syntax-tree/hast-util-whitespace.git"
   },
-  "bugs": "https://github.com/wooorm/hast-util-whitespace/issues",
+  "bugs": "https://github.com/syntax-tree/hast-util-whitespace/issues",
   "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
   "contributors": [
     "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)"
