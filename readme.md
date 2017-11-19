@@ -13,8 +13,6 @@ npm install hast-util-whitespace
 
 ## Usage
 
-Dependencies:
-
 ```javascript
 var whitespace = require('hast-util-whitespace');
 
