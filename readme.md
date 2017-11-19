@@ -50,6 +50,14 @@ whitespace({
 white-space: consisting of zero or more of space, tab (`\t`),
 line feed (`\n`), carriage return (`\r`), or form feed (`\f`).
 
+## Contribute
+
+See [`contribute.md` in `syntax-tree/hast`][contribute] for ways to get
+started.
+
+This organisation has a [Code of Conduct][coc].  By interacting with this
+repository, organisation, or community you agree to abide by its terms.
+
 ## License
 
 [MIT][license] © [Titus Wormer][author]
@@ -77,3 +85,7 @@ line feed (`\n`), carriage return (`\r`), or form feed (`\f`).
 [node]: https://github.com/syntax-tree/unist#node
 
 [text]: https://github.com/syntax-tree/unist#text
+
+[contribute]: https://github.com/syntax-tree/hast/blob/master/contributing.md
+
+[coc]: https://github.com/syntax-tree/hast/blob/master/code-of-conduct.md
