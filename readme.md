@@ -14,23 +14,23 @@ npm install hast-util-whitespace
 ## Usage
 
 ```javascript
-var whitespace = require('hast-util-whitespace');
+var whitespace = require('hast-util-whitespace')
 
 whitespace({
   type: 'element',
   tagName: 'div',
   children: []
-}); //=> false
+}) // => false
 
 whitespace({
   type: 'text',
   value: '\t  \n'
-}); //=> true
+}) // => true
 
 whitespace({
   type: 'text',
   value: '  text\f'
-}); //=> false
+}) // => false
 ```
 
 ## API

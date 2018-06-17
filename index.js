@@ -1,23 +1,22 @@
-'use strict';
+'use strict'
 
-/* Expose. */
-module.exports = interElementWhiteSpace;
+module.exports = interElementWhiteSpace
 
 /* HTML white-space expression.
  * See <https://html.spec.whatwg.org/#space-character>. */
-var re = /[ \t\n\f\r]/g;
+var re = /[ \t\n\f\r]/g
 
 /* Check if `node` is a inter-element white-space. */
 function interElementWhiteSpace(node) {
-  var value;
+  var value
 
   if (node && typeof node === 'object' && node.type === 'text') {
-    value = node.value || '';
+    value = node.value || ''
   } else if (typeof node === 'string') {
-    value = node;
+    value = node
   } else {
-    return false;
+    return false
   }
 
-  return value.replace(re, '') === '';
+  return value.replace(re, '') === ''
 }
