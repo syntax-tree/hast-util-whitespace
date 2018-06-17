@@ -2,7 +2,7 @@
 
 /* Dependencies. */
 var test = require('tape');
-var whitespace = require('./index.js');
+var whitespace = require('.');
 
 /* Tests. */
 test('whitespace', function (t) {
