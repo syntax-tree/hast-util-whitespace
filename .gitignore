@@ -5,3 +5,4 @@ coverage/
 node_modules/
 hast-util-whitespace.js
 hast-util-whitespace.min.js
+yarn.lock
