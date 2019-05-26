@@ -1,7 +1,7 @@
 language: node_js
 node_js:
-- lts/boron
-- node
+  - lts/dubnium
+  - node
 after_script: bash <(curl -s https://codecov.io/bash)
 deploy:
   provider: releases
@@ -9,7 +9,7 @@ deploy:
   api_key:
     secure: Byovhi+p16jL5CLhSwePgnHYXpHe02NZvVBJWEwIZQY39AAdnLmOqRQLOT/H9u9KbjCbtDXwZ604FmGPh/8w4z5NQXMcpuP1XyX9axukROw+yFeS2Q0wBaXEnRwLKtmyQmyV7mAXrRsaBXIhe7lmzbEs+RHAebRRkHkFHmrHQIG36MliQZ31fAMKoQd1l/SjcJcUO1KzFw7gKdzVkPvtAW4s/HK01Vb5QE86FuIGBTGGbb/9kYsCFHih6ImMTwJCI3p0/4P2Z8Y4EED3BgLPugYo5M5Sn0EFAczii2QM6QPfYFETtStDh4ZGC4M9pp9aaLa5xdkd/rtVROWQgQr8yfXM5JL/p5JMt5y8BMFxVbYo6UCI5EK6uN5VoUIbiOSHlz0CGTYdVVSxP+sSL316fRUDaLa8wE4z9BI0cS8kyoCkUiILjeXpvDHwcEAxmTc2fSxyhp8cTCTDoOu86ZiNH3c34CjiIrsbO07HhrWYs9o5ZIQ5tFc2s2jMQgHfIK2+34vpExYmCSlYcgRpNTfpnqA/v1obHEkNGnKWpW73s4R7O0zyYMpOyfkQdDdLrxTT6i4K5JNCw3V0Z4Qpe5mBG8ZureXd634dqEVas+o64iWIpSJS3xEN/3bE3xoGwjBn2QxwG1LyogN5sHsBrllAFQhc/Rf1wlyCSFhE2gECl0Y=
   file:
-    - "hast-util-whitespace.js"
-    - "hast-util-whitespace.min.js"
+    - 'hast-util-whitespace.js'
+    - 'hast-util-whitespace.min.js'
   on:
     tags: true
