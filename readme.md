@@ -1,19 +1,27 @@
-# hast-util-whitespace [![Build][build-badge]][build] [![Coverage][coverage-badge]][coverage] [![Downloads][downloads-badge]][downloads] [![Chat][chat-badge]][chat]
+# hast-util-whitespace
 
-Check whether a [HAST node][hast] is [**inter-element
-whitespace**][spec].
+[![Build][build-badge]][build]
+[![Coverage][coverage-badge]][coverage]
+[![Downloads][downloads-badge]][downloads]
+[![Size][size-badge]][size]
+[![Sponsors][sponsors-badge]][collective]
+[![Backers][backers-badge]][collective]
+[![Chat][chat-badge]][chat]
 
-## Installation
+[**hast**][hast] utility to check if a `node` is [*inter-element
+whitespace*][spec].
+
+## Install
 
 [npm][]:
 
-```bash
+```sh
 npm install hast-util-whitespace
 ```
 
 ## Usage
 
-```javascript
+```js
 var whitespace = require('hast-util-whitespace')
 
 whitespace({
@@ -37,24 +45,29 @@ whitespace({
 
 ### `whitespace(node|value)`
 
+Check if the given value is [*inter-element whitespace*][spec].
+
 ###### Parameters
 
-*   `node` ([`Node`][node], optional) — Node whose `value` to check.
-*   `value` (`string`, optional) — Value to check.
+*   `node` ([`Node`][node], optional) — Node to check
+*   `value` (`string`, optional) — Value to check
 
 ###### Returns
 
-`boolean` — Whether the `value` (of [`node`][text]) is inter-element
-white-space: consisting of zero or more of space, tab (`\t`),
-line feed (`\n`), carriage return (`\r`), or form feed (`\f`).
+`boolean` — Whether the `value` is inter-element white-space: consisting of zero
+or more of space, tab (`\t`), line feed (`\n`), carriage return (`\r`), or form
+feed (`\f`).
+If `node` is passed it must be a [*text*][text] node.
 
 ## Contribute
 
-See [`contributing.md` in `syntax-tree/hast`][contributing] for ways to get
+See [`contributing.md` in `syntax-tree/.github`][contributing] for ways to get
 started.
+See [`support.md`][support] for ways to get help.
 
-This organisation has a [Code of Conduct][coc].  By interacting with this
-repository, organisation, or community you agree to abide by its terms.
+This project has a [Code of Conduct][coc].
+By interacting with this repository, organisation, or community you agree to
+abide by its terms.
 
 ## License
 
@@ -74,9 +87,19 @@ repository, organisation, or community you agree to abide by its terms.
 
 [downloads]: https://www.npmjs.com/package/hast-util-whitespace
 
+[size-badge]: https://img.shields.io/bundlephobia/minzip/hast-util-whitespace.svg
+
+[size]: https://bundlephobia.com/result?p=hast-util-whitespace
+
+[sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
+
+[backers-badge]: https://opencollective.com/unified/backers/badge.svg
+
+[collective]: https://opencollective.com/unified
+
 [chat-badge]: https://img.shields.io/badge/join%20the%20community-on%20spectrum-7b16ff.svg
 
-[chat]: https://spectrum.chat/unified/rehype
+[chat]: https://spectrum.chat/unified/syntax-tree
 
 [npm]: https://docs.npmjs.com/cli/install
 
@@ -84,14 +107,16 @@ repository, organisation, or community you agree to abide by its terms.
 
 [author]: https://wooorm.com
 
+[contributing]: https://github.com/syntax-tree/.github/blob/master/contributing.md
+
+[support]: https://github.com/syntax-tree/.github/blob/master/support.md
+
+[coc]: https://github.com/syntax-tree/.github/blob/master/code-of-conduct.md
+
 [hast]: https://github.com/syntax-tree/hast
 
 [spec]: https://html.spec.whatwg.org/#inter-element-whitespace
 
-[node]: https://github.com/syntax-tree/unist#node
+[node]: https://github.com/syntax-tree/hast#nodes
 
-[text]: https://github.com/syntax-tree/unist#text
-
-[contributing]: https://github.com/syntax-tree/hast/blob/master/contributing.md
-
-[coc]: https://github.com/syntax-tree/hast/blob/master/code-of-conduct.md
+[text]: https://github.com/syntax-tree/hast#text
