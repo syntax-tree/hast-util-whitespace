@@ -53,7 +53,7 @@
     "prettier": true,
     "esnext": false,
     "ignores": [
-      "hast-util-is-element.js"
+      "hast-util-whitespace.js"
     ]
   },
   "nyc": {
