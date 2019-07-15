@@ -59,6 +59,11 @@ or more of space, tab (`\t`), line feed (`\n`), carriage return (`\r`), or form
 feed (`\f`).
 If `node` is passed it must be a [*text*][text] node.
 
+## Security
+
+`hast-util-whitespace` does not change the syntax tree so there are no openings
+for [cross-site scripting (XSS)][xss] attacks.
+
 ## Contribute
 
 See [`contributing.md` in `syntax-tree/.github`][contributing] for ways to get
@@ -120,3 +125,5 @@ abide by its terms.
 [node]: https://github.com/syntax-tree/hast#nodes
 
 [text]: https://github.com/syntax-tree/hast#text
+
+[xss]: https://en.wikipedia.org/wiki/Cross-site_scripting
