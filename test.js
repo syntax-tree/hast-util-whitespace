@@ -3,7 +3,7 @@
 var test = require('tape')
 var whitespace = require('.')
 
-test('whitespace', function(t) {
+test('whitespace', function (t) {
   t.equal(whitespace(), false, 'should return `false` without node')
 
   t.equal(
