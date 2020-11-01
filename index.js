@@ -2,20 +2,13 @@
 
 module.exports = interElementWhiteSpace
 
-// HTML white-space expression.
-// See <https://html.spec.whatwg.org/#space-character>.
-var re = /[ \t\n\f\r]/g
-
 function interElementWhiteSpace(node) {
-  var value
+  var value =
+    node && typeof node === 'object' && node.type === 'text'
+      ? node.value || ''
+      : node
 
-  if (node && typeof node === 'object' && node.type === 'text') {
-    value = node.value || ''
-  } else if (typeof node === 'string') {
-    value = node
-  } else {
-    return false
-  }
-
-  return value.replace(re, '') === ''
+  // HTML whitespace expression.
+  // See <https://html.spec.whatwg.org/#space-character>.
+  return typeof value === 'string' && value.replace(/[ \t\n\f\r]/g, '') === ''
 }
