@@ -1,5 +1,2 @@
 coverage/
-hast-util-whitespace.js
-hast-util-whitespace.min.js
-*.json
 *.md

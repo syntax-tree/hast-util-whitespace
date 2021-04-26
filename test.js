@@ -1,7 +1,5 @@
-'use strict'
-
-var test = require('tape')
-var whitespace = require('.')
+import test from 'tape'
+import {whitespace} from './index.js'
 
 test('whitespace', function (t) {
   t.equal(whitespace(), false, 'should return `false` without node')

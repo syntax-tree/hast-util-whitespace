@@ -1,8 +1,4 @@
-'use strict'
-
-module.exports = interElementWhiteSpace
-
-function interElementWhiteSpace(node) {
+export function whitespace(node) {
   var value =
     node && typeof node === 'object' && node.type === 'text'
       ? node.value || ''
