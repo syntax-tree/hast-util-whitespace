@@ -1,8 +1,15 @@
-export function whitespace(node) {
+/**
+ * @param {unknown} thing
+ * @returns {boolean}
+ */
+export function whitespace(thing) {
+  /** @type {string} */
   var value =
-    node && typeof node === 'object' && node.type === 'text'
-      ? node.value || ''
-      : node
+    // @ts-ignore looks like a node.
+    thing && typeof thing === 'object' && thing.type === 'text'
+      ? // @ts-ignore looks like a text.
+        thing.value || ''
+      : thing
 
   // HTML whitespace expression.
   // See <https://html.spec.whatwg.org/#space-character>.
