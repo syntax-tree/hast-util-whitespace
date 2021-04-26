@@ -1,6 +1,6 @@
 {
   "name": "hast-util-whitespace",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "hast utility to check if a node is inter-element whitespace",
   "license": "MIT",
   "keywords": [
