@@ -4,7 +4,7 @@
  */
 export function whitespace(thing) {
   /** @type {string} */
-  var value =
+  const value =
     // @ts-ignore looks like a node.
     thing && typeof thing === 'object' && thing.type === 'text'
       ? // @ts-ignore looks like a text.

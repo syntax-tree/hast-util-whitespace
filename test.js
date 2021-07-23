@@ -1,7 +1,7 @@
 import test from 'tape'
 import {whitespace} from './index.js'
 
-test('whitespace', function (t) {
+test('whitespace', (t) => {
   t.equal(whitespace(), false, 'should return `false` without node')
 
   t.equal(
