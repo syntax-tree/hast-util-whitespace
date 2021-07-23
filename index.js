@@ -5,9 +5,9 @@
 export function whitespace(thing) {
   /** @type {string} */
   const value =
-    // @ts-ignore looks like a node.
+    // @ts-expect-error looks like a node.
     thing && typeof thing === 'object' && thing.type === 'text'
-      ? // @ts-ignore looks like a text.
+      ? // @ts-expect-error looks like a text.
         thing.value || ''
       : thing
 

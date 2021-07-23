@@ -2,6 +2,7 @@ import test from 'tape'
 import {whitespace} from './index.js'
 
 test('whitespace', (t) => {
+  // @ts-expect-error: runtime.
   t.equal(whitespace(), false, 'should return `false` without node')
 
   t.equal(
