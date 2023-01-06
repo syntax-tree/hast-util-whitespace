@@ -1,8 +1,13 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
 import {whitespace} from './index.js'
+import * as mod from './index.js'
 
 test('whitespace', () => {
+  const api = Object.keys(mod)
+  assert.ok(api.includes('whitespace'), 'should expose `whitespace`')
+  assert.equal(api.length, 1, 'should expose the public api')
+
   // @ts-expect-error: runtime.
   assert.equal(whitespace(), false, 'should return `false` without node')
 
