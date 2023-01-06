@@ -17,7 +17,7 @@
 *   [Install](#install)
 *   [Use](#use)
 *   [API](#api)
-    *   [`whitespace(node|value)`](#whitespacenodevalue)
+    *   [`whitespace(thing)`](#whitespacething)
 *   [Types](#types)
 *   [Compatibility](#compatibility)
 *   [Security](#security)
@@ -85,21 +85,22 @@ whitespace({
 This package exports the identifier `whitespace`.
 There is no default export.
 
-### `whitespace(node|value)`
+### `whitespace(thing)`
 
 Check if the given value is [*inter-element whitespace*][spec].
 
 ###### Parameters
 
-*   `node` ([`Node`][node], optional) — Node to check
-*   `value` (`string`, optional) — Value to check
+*   `thing` (`unknown`, optional)
+    — thing to check (typically [`Node`][node] or `string`)
 
 ###### Returns
 
 Whether the `value` is inter-element whitespace (`boolean`): consisting of zero
 or more of space, tab (`\t`), line feed (`\n`), carriage return (`\r`), or form
 feed (`\f`).
-If `node` is passed it must be a [*text*][text] node.
+If a node is passed it must be a [`Text`][text] node, whose `value` field is
+checked.
 
 ## Types
 
@@ -215,7 +216,7 @@ abide by its terms.
 
 [hast]: https://github.com/syntax-tree/hast
 
-[spec]: https://html.spec.whatwg.org/#inter-element-whitespace
+[spec]: https://html.spec.whatwg.org/multipage/dom.html#inter-element-whitespace
 
 [node]: https://github.com/syntax-tree/hast#nodes
 
