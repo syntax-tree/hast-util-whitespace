@@ -47,14 +47,14 @@ npm install hast-util-whitespace
 In Deno with [`esm.sh`][esmsh]:
 
 ```js
-import {whitespace} from 'https://esm.sh/hast-util-whitespace@2'
+import {whitespace} from 'https://esm.sh/hast-util-whitespace@3'
 ```
 
 In browsers with [`esm.sh`][esmsh]:
 
 ```html
 <script type="module">
-  import {whitespace} from 'https://esm.sh/hast-util-whitespace@2?bundle'
+  import {whitespace} from 'https://esm.sh/hast-util-whitespace@3?bundle'
 </script>
 ```
 
