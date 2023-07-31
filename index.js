@@ -1,8 +1,16 @@
 /**
+ * @typedef {import('hast').Nodes} Nodes
+ */
+
+// HTML whitespace expression.
+// See <https://infra.spec.whatwg.org/#ascii-whitespace>.
+const re = /[ \t\n\f\r]/g
+
+/**
  * Check if the given value is *inter-element whitespace*.
  *
- * @param {unknown} thing
- *   Thing to check (typically `Node` or `string`).
+ * @param {Nodes | string} thing
+ *   Thing to check (`Node` or `string`).
  * @returns {boolean}
  *   Whether the `value` is inter-element whitespace (`boolean`): consisting of
  *   zero or more of space, tab (`\t`), line feed (`\n`), carriage return
@@ -11,15 +19,17 @@
  *   checked.
  */
 export function whitespace(thing) {
-  /** @type {string} */
-  const value =
-    // @ts-expect-error looks like a node.
-    thing && typeof thing === 'object' && thing.type === 'text'
-      ? // @ts-expect-error looks like a text.
-        thing.value || ''
-      : thing
+  return typeof thing === 'object'
+    ? thing.type === 'text'
+      ? empty(thing.value)
+      : false
+    : empty(thing)
+}
 
-  // HTML whitespace expression.
-  // See <https://infra.spec.whatwg.org/#ascii-whitespace>.
-  return typeof value === 'string' && value.replace(/[ \t\n\f\r]/g, '') === ''
+/**
+ * @param {string} value
+ * @returns {boolean}
+ */
+function empty(value) {
+  return value.replace(re, '') === ''
 }

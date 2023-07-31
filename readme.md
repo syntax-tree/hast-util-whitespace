@@ -66,6 +66,7 @@ import {whitespace} from 'hast-util-whitespace'
 whitespace({
   type: 'element',
   tagName: 'div',
+  properties: {},
   children: []
 }) // => false
 
@@ -91,8 +92,8 @@ Check if the given value is [*inter-element whitespace*][spec].
 
 ###### Parameters
 
-*   `thing` (`unknown`, optional)
-    — thing to check (typically [`Node`][node] or `string`)
+*   `thing` ([`Node`][node] or `string`, optional)
+    — thing to check
 
 ###### Returns
 

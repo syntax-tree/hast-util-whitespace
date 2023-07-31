@@ -10,11 +10,8 @@ test('whitespace', () => {
     'should expose the public api'
   )
 
-  // @ts-expect-error: runtime.
-  assert.equal(whitespace(), false, 'should return `false` without node')
-
   assert.equal(
-    whitespace({type: 'element', tagName: 'div'}),
+    whitespace({type: 'comment', value: 'asd'}),
     false,
     'should return `false` without text'
   )
@@ -29,12 +26,6 @@ test('whitespace', () => {
     whitespace({type: 'text', value: ' \t\r\n\f'}),
     true,
     'should return `true` for inter-element white-space'
-  )
-
-  assert.equal(
-    whitespace({type: 'text'}),
-    true,
-    'should return `true` for `text` without value'
   )
 
   assert.equal(
