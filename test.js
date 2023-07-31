@@ -1,10 +1,10 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import {whitespace} from './index.js'
+import {whitespace} from 'hast-util-whitespace'
 
 test('whitespace', async function (t) {
   await t.test('should expose the public api', async function () {
-    assert.deepEqual(Object.keys(await import('./index.js')).sort(), [
+    assert.deepEqual(Object.keys(await import('hast-util-whitespace')).sort(), [
       'whitespace'
     ])
   })
