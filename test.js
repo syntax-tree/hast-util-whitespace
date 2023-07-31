@@ -13,15 +13,12 @@ test('whitespace', async function (t) {
     assert.equal(whitespace({type: 'comment', value: 'asd'}), false)
   })
 
-  await t.test(
-    'should return `false` for other white-space',
-    async function () {
-      assert.equal(whitespace({type: 'text', value: '\v'}), false)
-    }
-  )
+  await t.test('should return `false` for other whitespace', async function () {
+    assert.equal(whitespace({type: 'text', value: '\v'}), false)
+  })
 
   await t.test(
-    'should return `true` for inter-element white-space',
+    'should return `true` for inter-element whitespace',
     async function () {
       assert.equal(whitespace({type: 'text', value: ' \t\r\n\f'}), true)
     }
@@ -35,7 +32,7 @@ test('whitespace', async function (t) {
   )
 
   await t.test(
-    'should return `true` for a `string` of inter-element white-space',
+    'should return `true` for a `string` of inter-element whitespace',
     async function () {
       assert.equal(whitespace(' \t\r\n\f'), true)
     }
